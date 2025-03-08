@@ -1,33 +1,26 @@
 //=========================================================//
 //               /COMPONENTS/_CONTAINER.SCSS               //
 //=========================================================//
-
 @use '../abstracts/breakpoints' as bp;
-
 .container {
   width: 100%;
   padding-right: calc(1rem * 0.5);
   padding-left: calc(1rem * 0.5);
   margin-right: auto;
   margin-left: auto;
-  
-  @include bp.min(sm){
-    max-width: 540px;
-  }
-  
-  @include bp.min(md){
-    max-width: 720px;
-  }
-  
-  @include bp.min(lg){
-    max-width: 960px;
-  }
-  
-  @include bp.min(xl){
-    max-width: 1140px;
-  }
-  
-  @include bp.min(xxl){
-    max-width: 1320px;
+
+  // Breakpoint-specific max-widths
+  $container-max-widths: (
+    sm: 540px,
+    md: 720px,
+    lg: 960px,
+    xl: 1140px,
+    xxl: 1320px
+  );
+
+  @each $breakpoint, $max-width in $container-max-widths {
+    @include bp.min($breakpoint) {
+      max-width: $max-width;
+    }
   }
 }
