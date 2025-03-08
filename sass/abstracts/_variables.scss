@@ -1,0 +1,54 @@
+//=========================================================//
+//                      VARIABLES.SCSS                     //
+//=========================================================//
+//                    FONT FAMILY & SIZE                   //
+//=========================================================//
+//                                                         //
+//  Common Types of Scale Ratios                           //
+//  Some common ratios often used in design:               //
+//                                                         //
+//  ✓ Minor Second (1.067)                                 //
+//  ✓ Major Second (1.125)                                 //
+//  ✓ Minor Third (1.200)                                  //
+//  ✓ Major Third (1.250)                                  //
+//  ✓ Perfect Fourth (1.333)                               //
+//  ✓ Augmented Fourth (1.414)                             //
+//  ✓ Perfect Fifth (1.500)                                //
+//  ✓ Golden Ratio (1.618)                                 //
+//                                                         //
+//=========================================================//
+@function scale($step) {
+  @return $font__sizs-default * pow($scale-ratio, $step);
+}
+
+$font__family--first         : 'Inter', sans-serif;
+$font__family--second        : 'Open Sans', sans-serif;
+
+$font__sizs-default          : 16px;  // Basic size
+$scale-ratio                 : 1.067; // Minor Second
+
+$font__size--xs              : scale(-2);  // ~14px
+$font__size--sm              : scale(-1);  // ~15px
+$font__size--md              : scale(0);   // ~16px (default)
+$font__size--lg              : scale(1);   // ~17px
+$font__size--xl              : scale(2);   // ~18px
+
+$font__size--2xl             : scale(3);   // ~19px
+$font__size--3xl             : scale(4);   // ~20px
+$font__size--4xl             : scale(5);   // ~22px
+$font__size--5xl             : scale(6);   // ~23px
+$font__size--6xl             : scale(7);   // ~25px
+$font__size--7xl             : scale(8);   // ~26px
+
+//=========================================================//
+//                        FONT WEIGHT                      //
+//=========================================================//
+
+$font__weight--thin          : 100;
+$font__weight--extra-light   : 200;
+$font__weight--light         : 300;
+$font__weight--normal        : 400;
+$font__weight--medium        : 500;
+$font__weight--semi-bold     : 600;
+$font__weight--bold          : 700;
+$font__weight--extra-bold    : 800;

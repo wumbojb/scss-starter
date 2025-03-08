@@ -1,0 +1,9 @@
+//=========================================================//
+//                           COLORS                        //
+//=========================================================//
+
+@use './tailwind-colors' as tw;
+
+$color__first    : tw.$neutral-900;
+$color__second   : tw.$neutral-50;
+$color__accent   : tw.$red-500;
