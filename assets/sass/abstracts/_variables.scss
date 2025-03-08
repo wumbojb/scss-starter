@@ -19,7 +19,7 @@
 //=========================================================//
 @use "sass:math";
 @function scale($step) {
-  @return math.div(round($font--sizs-default * pow($scale-ratio, $step) * 100), 100);
+  @return math.div(math.round($font--sizs-default * pow($scale-ratio, $step) * 100), 100);
 }
 
 $font__family--first         : 'Inter', sans-serif;
