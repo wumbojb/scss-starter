@@ -2,7 +2,7 @@
 //               /COMPONENTS/_CONTAINER.SCSS               //
 //=========================================================//
 @use '../abstracts/breakpoints' as bp;
-.container {
+.u-container {
   width: 100%;
   padding-right: calc(1rem * 0.5);
   padding-left: calc(1rem * 0.5);
