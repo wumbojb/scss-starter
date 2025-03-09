@@ -3,7 +3,7 @@
 //=========================================================//
 @mixin flex-justify($justify: center, $align: center){
   display: flex;
-  justify-conten: $justify;
+  justify-content: $justify;
   align-items: $align;
 }
 
